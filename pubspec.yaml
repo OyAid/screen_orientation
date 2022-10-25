@@ -1,7 +1,7 @@
 name: screen_orientation
-description: 获取屏幕的方向
+description: 一款动态获取屏幕横屏、竖屏方向以及摄像头所处位置的插件
 version: 0.0.1
-homepage:
+homepage: https://github.com/OyyAd/screen_orientation.git
 
 environment:
   sdk: '>=2.18.2 <3.0.0'
