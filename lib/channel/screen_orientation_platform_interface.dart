@@ -1,6 +1,6 @@
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-
-import 'screen_orientation_method_channel.dart';
+import 'package:screen_orientation/channel/screen_orientation_method_channel.dart';
+import 'package:screen_orientation/enum/screen_orientation_enum.dart';
 
 abstract class ScreenOrientationPlatform extends PlatformInterface {
   /// Constructs a ScreenOrientationPlatform.
@@ -23,7 +23,18 @@ abstract class ScreenOrientationPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<String?> getPlatformVersion() {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+  Future<bool> init() {
+    throw UnimplementedError('init() has not been implemented.');
+  }
+
+  Future<void> dispose() {
+    throw UnimplementedError('dispose() has not been implemented.');
+  }
+
+  Future<void> screenChange({
+    required Function(ScreenOrient) screenOrient,
+    Function(CameraOrient)? cameraOrient,
+  }) {
+    throw UnimplementedError('screenChange() has not been implemented.');
   }
 }

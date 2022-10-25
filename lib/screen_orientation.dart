@@ -1,7 +1,4 @@
-import 'screen_orientation_platform_interface.dart';
+library screen_orientation;
 
-class ScreenOrientation {
-  static Future<String?> getPlatformVersion() {
-    return ScreenOrientationPlatform.instance.getPlatformVersion();
-  }
-}
+export 'channel/screen_orientation_method.dart';
+export 'enum/screen_orientation_enum.dart';
