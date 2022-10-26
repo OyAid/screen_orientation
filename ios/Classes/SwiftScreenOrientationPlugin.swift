@@ -57,31 +57,15 @@ public class SwiftScreenOrientationPlugin: NSObject, FlutterPlugin {
     //屏幕方向变换通知
     //此函数需为static类型， 不然监听回调不了这个方法
     @objc private static func deviceOrientaionDidChange() {
-        switch UIDevice.current.orientation {
-            case .unknown:
-            //未知
-            print("未知")
-            case .portrait:
-            //竖屏, 摄像头在上方
+        var orientation:UIDeviceOrientation = UIDevice.current.orientation
+        if orientation == .portrait {
             _channel.sendMessage(["screen":"portrait","camera": "top"])
-            case .portraitUpsideDown:
-            //颠倒竖屏, 摄像头在下方
+        } else if orientation == .portraitUpsideDown {
             _channel.sendMessage(["screen":"portrait","camera": "bottom"])
-            case .landscapeLeft:
-            //横屏, 摄像头在左方
+        } else if orientation == .landscapeLeft {
             _channel.sendMessage(["screen":"landscape","camera": "left"])
-            case .landscapeRight:
-            //横屏, 摄像头在右方
+        } else if orientation == .landscapeRight {
             _channel.sendMessage(["screen":"landscape","camera": "right"])
-            case .faceUp:
-            //手机放平，屏幕朝上
-            print("手机放平，屏幕朝上")
-            case .faceDown:
-            //手机放平，屏幕朝下
-            print("手机放平，屏幕朝下")
-            default:
-            //没有方向
-            print("没有方向")
         }
     }
 }
