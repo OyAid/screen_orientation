@@ -1,9 +1,7 @@
 # screen_orientation
 Results the preview
 
-![效果图](https://huatu.98youxi.com/markdown/work/uploads/upload_e13dde205ca09ee646ddcb7c3c93d06a.jpg)
-
-## 效果演示地址：[点这里](https://www.bilibili.com/video/BV1HR4y1Q7Tq/)
+![效果图](https://img1.doubanio.com/view/photo/l/public/p2882452117.jpg)
 
 ## Installing
 
